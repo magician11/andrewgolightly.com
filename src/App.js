@@ -7,7 +7,10 @@ import {
   Avatar,
   Button
 } from '@material-ui/core';
-import GitHubIcon from '@material-ui/icons/GitHub';
+import {
+  GitHub as GitHubIcon,
+  LinkedIn as LinkedInIcon
+} from '@material-ui/icons';
 import { blue, red, purple, yellow } from '@material-ui/core/colors';
 import { makeStyles } from '@material-ui/core/styles';
 import AppCard from './AppCard';
@@ -19,55 +22,51 @@ import conversationsImage from './images/conversation.jpg';
 import bitcoinImage from './images/bitcoin.jpg';
 import nakedGirlImage from './images/naked-girl.jpg';
 
-const useStyles = makeStyles(theme => {
-  console.log(theme);
-
-  return {
-    container: {
-      height: '100vh'
-    },
-    mainContainer: {
-      backgroundColor: blue[500]
-    },
-    aboutContainer: {
-      backgroundColor: blue[900]
-    },
-    portfolioContainer: {
-      backgroundColor: purple[500],
-      padding: theme.spacing(3.3)
-    },
-    skillsContainer: {
-      backgroundColor: yellow[900]
-    },
-    contactContainer: {
-      backgroundColor: red[500]
-    },
-    title: {
-      padding: theme.spacing(1),
-      letterSpacing: theme.spacing(1)
-    },
-    role: {
-      padding: theme.spacing(1),
-      letterSpacing: theme.spacing(1) / 2
-    },
-    verticallyAlign: {
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center'
-    },
-    photo: {
-      width: theme.spacing(33),
-      height: theme.spacing(33),
-      margin: theme.spacing(4)
-    },
-    card: {
-      padding: theme.spacing(3)
-    },
-    bodyText: {
-      fontSize: theme.spacing(2.2)
-    }
-  };
-});
+const useStyles = makeStyles(theme => ({
+  container: {
+    height: '100vh'
+  },
+  mainContainer: {
+    backgroundColor: blue[500]
+  },
+  aboutContainer: {
+    backgroundColor: blue[900]
+  },
+  portfolioContainer: {
+    backgroundColor: purple[500],
+    padding: theme.spacing(3.3)
+  },
+  skillsContainer: {
+    backgroundColor: yellow[900]
+  },
+  contactContainer: {
+    backgroundColor: red[500]
+  },
+  title: {
+    padding: theme.spacing(1),
+    letterSpacing: theme.spacing(1)
+  },
+  role: {
+    padding: theme.spacing(1),
+    letterSpacing: theme.spacing(1) / 2
+  },
+  verticallyAlign: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center'
+  },
+  photo: {
+    width: theme.spacing(33),
+    height: theme.spacing(33),
+    margin: theme.spacing(4)
+  },
+  card: {
+    padding: theme.spacing(3)
+  },
+  bodyText: {
+    fontSize: theme.spacing(2.2)
+  }
+}));
 
 export default function App() {
   const classes = useStyles();
@@ -202,8 +201,21 @@ export default function App() {
             React, and Firebase. Automation of business processes using apps for
             Slack.
           </Typography>
-          <Button color="primary" size="large" startIcon={<GitHubIcon />}>
+          <Button
+            color="primary"
+            size="large"
+            startIcon={<GitHubIcon />}
+            href="https://github.com/magician11/"
+          >
             GitHub
+          </Button>
+          <Button
+            color="primary"
+            size="large"
+            startIcon={<LinkedInIcon />}
+            href="https://www.linkedin.com/in/andrewgolightly11"
+          >
+            LinkedIn
           </Button>
         </Grid>
       </Grid>
