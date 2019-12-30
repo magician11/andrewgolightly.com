@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import clsx from 'clsx';
 import { Grid, CssBaseline, Typography, Avatar } from '@material-ui/core';
-import { blue, red, purple } from '@material-ui/core/colors';
+import { blue, red, purple, yellow } from '@material-ui/core/colors';
 import { makeStyles } from '@material-ui/core/styles';
 import AppCard from './AppCard';
 import agPhoto from './images/andrew-golightly.jpg';
@@ -25,6 +25,9 @@ const useStyles = makeStyles(theme => ({
   portfolioContainer: {
     backgroundColor: purple[500],
     padding: theme.spacing(3.3)
+  },
+  skillsContainer: {
+    backgroundColor: yellow[900]
   },
   contactContainer: {
     backgroundColor: red[500]
@@ -111,7 +114,7 @@ export default function App() {
           </Typography>
         </Grid>
       </Grid>
-      <Grid container className={clsx(classes.portfolioContainer)}>
+      <Grid container className={classes.portfolioContainer}>
         <Grid item xs={12}>
           <Typography variant="h2" gutterBottom className={classes.text}>
             Apps
@@ -170,6 +173,27 @@ export default function App() {
             link="https://apps.golightlyplus.com/appropriate-photos"
             image={nakedGirlImage}
           />
+        </Grid>
+      </Grid>
+      <Grid
+        container
+        className={clsx(classes.container, classes.skillsContainer)}
+        justify="center"
+        alignItems="center"
+      >
+        <Grid item xs={8} lg={6}>
+          <Typography variant="h2" gutterBottom className={classes.text}>
+            Tech skills
+          </Typography>
+          <Typography
+            variant="body1"
+            gutterBottom
+            className={clsx(classes.bodyText, classes.text)}
+          >
+            Expert in JavaScript. Fullstack developer specialising in Node.js,
+            React, and Firebase. Automation of business processes using apps for
+            Slack.
+          </Typography>
         </Grid>
       </Grid>
       <Grid
