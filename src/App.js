@@ -25,6 +25,9 @@ import moviesImage from './images/movies.jpg';
 import conversationsImage from './images/conversation.jpg';
 import bitcoinImage from './images/bitcoin.jpg';
 import nakedGirlImage from './images/naked-girl.jpg';
+import styleImage from './images/style-transfer.jpg';
+import matrixImage from './images/the-matrix.jpg';
+import coloursImage from './images/speech-to-colours.jpg';
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -173,7 +176,7 @@ export default function App() {
         <Grid item xs={12} sm={4} className={classes.card}>
           <AppCard
             title="Bitcoin POS"
-            text="A safe and reliable point of sale app for Bitcoin"
+            text="a safe and reliable point of sale app for Bitcoin"
             linkText="Accept Bitcoin"
             link="https://bitcoin-pos.golightlyplus.com/"
             image={bitcoinImage}
@@ -186,6 +189,33 @@ export default function App() {
             linkText="Analyse images"
             link="https://apps.golightlyplus.com/appropriate-photos"
             image={nakedGirlImage}
+          />
+        </Grid>
+        <Grid item xs={12} sm={4} className={classes.card}>
+          <AppCard
+            title="Style Transfer"
+            text="transforming your image into art"
+            linkText="Style image"
+            link="https://apps.golightlyplus.com/style-transfer/"
+            image={styleImage}
+          />
+        </Grid>
+        <Grid item xs={12} sm={4} className={classes.card}>
+          <AppCard
+            title="The Matrix"
+            text="a reproduction of the Matrix digital rain"
+            linkText="Enter the Matrix"
+            link="https://apps.golightlyplus.com/The-Matrix-digital-rain/"
+            image={matrixImage}
+          />
+        </Grid>
+        <Grid item xs={12} sm={4} className={classes.card}>
+          <AppCard
+            title="Speech To Colours"
+            text="use your voice to change background colours"
+            linkText="Change colours"
+            link="https://apps.golightlyplus.com/speech-to-colours/"
+            image={coloursImage}
           />
         </Grid>
       </Grid>
