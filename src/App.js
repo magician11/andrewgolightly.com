@@ -5,7 +5,11 @@ import {
   CssBaseline,
   Typography,
   Avatar,
-  Button
+  Button,
+  Card,
+  CardActionArea,
+  CardMedia,
+  CardContent
 } from '@material-ui/core';
 import {
   GitHub as GitHubIcon,
@@ -38,6 +42,9 @@ const useStyles = makeStyles(theme => ({
   },
   skillsContainer: {
     backgroundColor: yellow[900]
+  },
+  mapsContainer: {
+    backgroundColor: blue[300]
   },
   contactContainer: {
     backgroundColor: red[500]
@@ -217,6 +224,32 @@ export default function App() {
           >
             LinkedIn
           </Button>
+        </Grid>
+      </Grid>
+      <Grid
+        container
+        className={clsx(classes.container, classes.mapsContainer)}
+        justify="center"
+        alignItems="center"
+      >
+        <Grid item xs={10} sm={8}>
+          <Card>
+            <CardActionArea>
+              <CardMedia
+                component="iframe"
+                alt="Andrew Travels"
+                height="470"
+                src="https://www.google.com/maps/d/embed?mid=1TepY-cF-tV1zLyADZU3-B-qaVGc"
+                title="Andrew's Travels"
+              />
+              <CardContent>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  Spent most of life in South Africa, New Zealand, Australia,
+                  Thailand, England, and the USA. To date, visited 40 countries.
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
         </Grid>
       </Grid>
       <Grid
