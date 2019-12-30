@@ -8,6 +8,9 @@ import agPhoto from './images/andrew-golightly.jpg';
 import birthdaysImage from './images/birthdays-ai.jpg';
 import speakingImage from './images/syzygy-solutions.jpg';
 import moviesImage from './images/movies.jpg';
+import conversationsImage from './images/conversation.jpg';
+import bitcoinImage from './images/bitcoin.jpg';
+import nakedGirlImage from './images/naked-girl.jpg';
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -21,7 +24,7 @@ const useStyles = makeStyles(theme => ({
   },
   portfolioContainer: {
     backgroundColor: purple[500],
-    padding: theme.spacing(3)
+    padding: theme.spacing(3.3)
   },
   contactContainer: {
     backgroundColor: red[500]
@@ -108,10 +111,7 @@ export default function App() {
           </Typography>
         </Grid>
       </Grid>
-      <Grid
-        container
-        className={clsx(classes.portfolioContainer, classes.container)}
-      >
+      <Grid container className={clsx(classes.portfolioContainer)}>
         <Grid item xs={12}>
           <Typography variant="h2" gutterBottom className={classes.text}>
             Apps
@@ -142,6 +142,33 @@ export default function App() {
             linkText="View movies"
             link="https://chiangmaimovies.com"
             image={moviesImage}
+          />
+        </Grid>
+        <Grid item xs={12} sm={4} className={classes.card}>
+          <AppCard
+            title="Deep Connections"
+            text="start a conversation with those around you"
+            linkText="Download app"
+            link="https://createdeepconnections.com"
+            image={conversationsImage}
+          />
+        </Grid>
+        <Grid item xs={12} sm={4} className={classes.card}>
+          <AppCard
+            title="Bitcoin POS"
+            text="A safe and reliable point of sale app for Bitcoin"
+            linkText="Accept Bitcoin"
+            link="https://bitcoin-pos.golightlyplus.com/"
+            image={bitcoinImage}
+          />
+        </Grid>
+        <Grid item xs={12} sm={4} className={classes.card}>
+          <AppCard
+            title="Appropriate photos"
+            text="analyse your image for any adult content"
+            linkText="Analyse images"
+            link="https://apps.golightlyplus.com/appropriate-photos"
+            image={nakedGirlImage}
           />
         </Grid>
       </Grid>
