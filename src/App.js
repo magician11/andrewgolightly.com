@@ -184,7 +184,7 @@ export default function App() {
         </Grid>
         <Grid item xs={12} sm={4} className={classes.card}>
           <AppCard
-            title="Appropriate photos"
+            title="Appropriate Photos"
             text="analyse your image for any adult content"
             linkText="Analyse images"
             link="https://apps.golightlyplus.com/appropriate-photos"
