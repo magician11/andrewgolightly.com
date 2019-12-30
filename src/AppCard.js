@@ -27,7 +27,12 @@ export default function AppCard(props) {
       <CardActionArea>
         <CardMedia className={classes.media} image={image} title={title} />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
+          <Typography
+            gutterBottom
+            variant="h5"
+            component="h2"
+            color="textSecondary"
+          >
             {title}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
@@ -36,7 +41,7 @@ export default function AppCard(props) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary" href={link}>
+        <Button size="small" color="secondary" href={link}>
           {linkText}
         </Button>
       </CardActions>

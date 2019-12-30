@@ -1,6 +1,13 @@
 import React, { Fragment } from 'react';
 import clsx from 'clsx';
-import { Grid, CssBaseline, Typography, Avatar } from '@material-ui/core';
+import {
+  Grid,
+  CssBaseline,
+  Typography,
+  Avatar,
+  Button
+} from '@material-ui/core';
+import GitHubIcon from '@material-ui/icons/GitHub';
 import { blue, red, purple, yellow } from '@material-ui/core/colors';
 import { makeStyles } from '@material-ui/core/styles';
 import AppCard from './AppCard';
@@ -12,54 +19,55 @@ import conversationsImage from './images/conversation.jpg';
 import bitcoinImage from './images/bitcoin.jpg';
 import nakedGirlImage from './images/naked-girl.jpg';
 
-const useStyles = makeStyles(theme => ({
-  container: {
-    height: '100vh'
-  },
-  mainContainer: {
-    backgroundColor: blue[500]
-  },
-  aboutContainer: {
-    backgroundColor: blue[900]
-  },
-  portfolioContainer: {
-    backgroundColor: purple[500],
-    padding: theme.spacing(3.3)
-  },
-  skillsContainer: {
-    backgroundColor: yellow[900]
-  },
-  contactContainer: {
-    backgroundColor: red[500]
-  },
-  text: {
-    color: blue[50]
-  },
-  title: {
-    padding: theme.spacing(1),
-    letterSpacing: theme.spacing(1)
-  },
-  role: {
-    padding: theme.spacing(1),
-    letterSpacing: theme.spacing(1) / 2
-  },
-  verticallyAlign: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center'
-  },
-  photo: {
-    width: theme.spacing(33),
-    height: theme.spacing(33),
-    margin: theme.spacing(4)
-  },
-  card: {
-    padding: theme.spacing(3)
-  },
-  bodyText: {
-    fontSize: theme.spacing(2.2)
-  }
-}));
+const useStyles = makeStyles(theme => {
+  console.log(theme);
+
+  return {
+    container: {
+      height: '100vh'
+    },
+    mainContainer: {
+      backgroundColor: blue[500]
+    },
+    aboutContainer: {
+      backgroundColor: blue[900]
+    },
+    portfolioContainer: {
+      backgroundColor: purple[500],
+      padding: theme.spacing(3.3)
+    },
+    skillsContainer: {
+      backgroundColor: yellow[900]
+    },
+    contactContainer: {
+      backgroundColor: red[500]
+    },
+    title: {
+      padding: theme.spacing(1),
+      letterSpacing: theme.spacing(1)
+    },
+    role: {
+      padding: theme.spacing(1),
+      letterSpacing: theme.spacing(1) / 2
+    },
+    verticallyAlign: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center'
+    },
+    photo: {
+      width: theme.spacing(33),
+      height: theme.spacing(33),
+      margin: theme.spacing(4)
+    },
+    card: {
+      padding: theme.spacing(3)
+    },
+    bodyText: {
+      fontSize: theme.spacing(2.2)
+    }
+  };
+});
 
 export default function App() {
   const classes = useStyles();
@@ -194,6 +202,9 @@ export default function App() {
             React, and Firebase. Automation of business processes using apps for
             Slack.
           </Typography>
+          <Button color="primary" size="large" startIcon={<GitHubIcon />}>
+            GitHub
+          </Button>
         </Grid>
       </Grid>
       <Grid
