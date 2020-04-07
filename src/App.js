@@ -13,7 +13,9 @@ import {
 } from '@material-ui/core';
 import {
   GitHub as GitHubIcon,
-  LinkedIn as LinkedInIcon
+  LinkedIn as LinkedInIcon,
+  Link as LinkIcon,
+  GraphicEq as GraphicEqIcon
 } from '@material-ui/icons';
 import { blue, red, purple, yellow } from '@material-ui/core/colors';
 import { makeStyles } from '@material-ui/core/styles';
@@ -45,6 +47,9 @@ const useStyles = makeStyles(theme => ({
   },
   skillsContainer: {
     backgroundColor: yellow[900]
+  },
+  empathsContainer: {
+    backgroundColor: purple[800]
   },
   mapsContainer: {
     backgroundColor: blue[300]
@@ -93,7 +98,7 @@ export default function App() {
           <Typography
             variant="h3"
             component="h1"
-            className={clsx(classes.title, classes.text)}
+            className={classes.title}
             gutterBottom
             align="center"
           >
@@ -101,7 +106,7 @@ export default function App() {
           </Typography>
           <Typography
             variant="subtitle1"
-            className={clsx(classes.role, classes.text)}
+            className={classes.role}
             align="center"
           >
             Chief Technology Officer
@@ -123,7 +128,7 @@ export default function App() {
           <Typography
             variant="body1"
             gutterBottom
-            className={clsx(classes.bodyText, classes.text)}
+            className={classes.bodyText}
             align="center"
           >
             Loves coding using JavaScript to build useful solutions. Adores
@@ -133,7 +138,7 @@ export default function App() {
       </Grid>
       <Grid container className={classes.portfolioContainer}>
         <Grid item xs={12}>
-          <Typography variant="h2" gutterBottom className={classes.text}>
+          <Typography variant="h2" gutterBottom>
             Apps
           </Typography>
         </Grid>
@@ -225,15 +230,11 @@ export default function App() {
         justify="center"
         alignItems="center"
       >
-        <Grid item xs={8} lg={6}>
-          <Typography variant="h2" gutterBottom className={classes.text}>
+        <Grid item xs={9} sm={8} lg={6}>
+          <Typography variant="h2" gutterBottom>
             Tech skills
           </Typography>
-          <Typography
-            variant="body1"
-            gutterBottom
-            className={clsx(classes.bodyText, classes.text)}
-          >
+          <Typography variant="body1" gutterBottom className={classes.bodyText}>
             Expert in JavaScript. Fullstack developer specialising in Node.js,
             React, and Firebase. Automation of business processes using apps for
             Slack.
@@ -253,6 +254,44 @@ export default function App() {
             href="https://www.linkedin.com/in/andrewgolightly11"
           >
             LinkedIn
+          </Button>
+        </Grid>
+      </Grid>
+      <Grid
+        container
+        className={clsx(classes.container, classes.empathsContainer)}
+        justify="center"
+        alignItems="center"
+      >
+        <Grid item xs={9} sm={8} lg={6}>
+          <Typography variant="h3" gutterBottom>
+            Empath Community
+          </Typography>
+          <Typography variant="body1" gutterBottom className={classes.bodyText}>
+            Andrew started and runs a community of empaths from around the
+            world. The members meet online in private chat groups, group calls,
+            and sometimes in person. There is an extensive vetting process to
+            join.
+          </Typography>
+          <Typography variant="body1" gutterBottom className={classes.bodyText}>
+            Andrew also hosts a podcast of empath interviews that anyone is able
+            to listen to.
+          </Typography>
+          <Button
+            color="primary"
+            size="large"
+            startIcon={<LinkIcon />}
+            href="https://empath.community/"
+          >
+            Website
+          </Button>
+          <Button
+            color="primary"
+            size="large"
+            startIcon={<GraphicEqIcon />}
+            href="https://anchor.fm/andrew-golightly/"
+          >
+            Podcast
           </Button>
         </Grid>
       </Grid>
@@ -289,11 +328,7 @@ export default function App() {
         alignItems="center"
       >
         <Grid item className={classes.verticallyAlign} xs={8}>
-          <Typography
-            variant="h3"
-            gutterBottom
-            className={clsx(classes.bodyText, classes.text)}
-          >
+          <Typography variant="h3" gutterBottom className={classes.bodyText}>
             support@andrewgolightly.com
           </Typography>
         </Grid>
