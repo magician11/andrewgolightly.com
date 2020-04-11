@@ -1,5 +1,6 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import clsx from 'clsx';
+import ReactGA from 'react-ga';
 import {
   Grid,
   CssBaseline,
@@ -86,6 +87,12 @@ const useStyles = makeStyles(theme => ({
 
 export default function App() {
   const classes = useStyles();
+
+  useEffect(() => {
+    ReactGA.initialize('UA-38230161-2');
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+
   return (
     <Fragment>
       <CssBaseline />
