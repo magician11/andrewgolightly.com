@@ -30,6 +30,7 @@ import nakedGirlImage from './images/naked-girl.jpg';
 import styleImage from './images/style-transfer.jpg';
 import matrixImage from './images/the-matrix.jpg';
 import coloursImage from './images/speech-to-colours.jpg';
+import synkImage from './images/synk.jpg';
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -136,11 +137,53 @@ export default function App() {
           </Typography>
         </Grid>
       </Grid>
+      <Grid
+        container
+        className={clsx(classes.container, classes.skillsContainer)}
+        justify="center"
+        alignItems="center"
+      >
+        <Grid item xs={9} sm={8} lg={6}>
+          <Typography variant="h2" gutterBottom>
+            Tech skills
+          </Typography>
+          <Typography variant="body1" gutterBottom className={classes.bodyText}>
+            Expert in JavaScript. Fullstack developer specialising in Node.js,
+            React, and Firebase. Automation of business processes using apps for
+            Slack.
+          </Typography>
+          <Button
+            color="primary"
+            size="large"
+            startIcon={<GitHubIcon />}
+            href="https://github.com/magician11/"
+          >
+            GitHub
+          </Button>
+          <Button
+            color="primary"
+            size="large"
+            startIcon={<LinkedInIcon />}
+            href="https://www.linkedin.com/in/andrewgolightly11"
+          >
+            LinkedIn
+          </Button>
+        </Grid>
+      </Grid>
       <Grid container className={classes.portfolioContainer}>
         <Grid item xs={12}>
           <Typography variant="h2" gutterBottom>
             Apps
           </Typography>
+        </Grid>
+        <Grid item xs={12} sm={4} className={classes.card}>
+          <AppCard
+            title="Synk"
+            text="share your travel schedule with select friends"
+            linkText="Share Travels"
+            link="https://synk.world/"
+            image={synkImage}
+          />
         </Grid>
         <Grid item xs={12} sm={4} className={classes.card}>
           <AppCard
@@ -224,39 +267,7 @@ export default function App() {
           />
         </Grid>
       </Grid>
-      <Grid
-        container
-        className={clsx(classes.container, classes.skillsContainer)}
-        justify="center"
-        alignItems="center"
-      >
-        <Grid item xs={9} sm={8} lg={6}>
-          <Typography variant="h2" gutterBottom>
-            Tech skills
-          </Typography>
-          <Typography variant="body1" gutterBottom className={classes.bodyText}>
-            Expert in JavaScript. Fullstack developer specialising in Node.js,
-            React, and Firebase. Automation of business processes using apps for
-            Slack.
-          </Typography>
-          <Button
-            color="primary"
-            size="large"
-            startIcon={<GitHubIcon />}
-            href="https://github.com/magician11/"
-          >
-            GitHub
-          </Button>
-          <Button
-            color="primary"
-            size="large"
-            startIcon={<LinkedInIcon />}
-            href="https://www.linkedin.com/in/andrewgolightly11"
-          >
-            LinkedIn
-          </Button>
-        </Grid>
-      </Grid>
+
       <Grid
         container
         className={clsx(classes.container, classes.empathsContainer)}
