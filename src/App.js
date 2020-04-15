@@ -10,7 +10,8 @@ import {
   Card,
   CardActionArea,
   CardMedia,
-  CardContent
+  CardContent,
+  Grow
 } from '@material-ui/core';
 import {
   GitHub as GitHubIcon,
@@ -32,10 +33,18 @@ import styleImage from './images/style-transfer.jpg';
 import matrixImage from './images/the-matrix.jpg';
 import coloursImage from './images/speech-to-colours.jpg';
 import synkImage from './images/synk.jpg';
+import logo from './images/logo.png';
 
 const useStyles = makeStyles(theme => ({
   container: {
     height: '100vh'
+  },
+  logo: {
+    '& img': {
+      maxWidth: theme.spacing(33)
+    },
+    textAlign: 'center',
+    height: theme.spacing(33)
   },
   mainContainer: {
     backgroundColor: blue[500]
@@ -103,6 +112,11 @@ export default function App() {
         alignItems="center"
       >
         <Grid item>
+          <div className={classes.logo}>
+            <Grow in style={{ transformOrigin: '0 0 0' }} timeout={8000}>
+              <img src={logo} alt="Andrew Golightly" />
+            </Grow>
+          </div>
           <Typography
             variant="h3"
             component="h1"
