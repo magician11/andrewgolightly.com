@@ -33,6 +33,8 @@ import styleImage from './images/style-transfer.jpg';
 import matrixImage from './images/the-matrix.jpg';
 import coloursImage from './images/speech-to-colours.jpg';
 import synkImage from './images/synk.jpg';
+import multiverseImage from './images/multiverse.jpg';
+import sacredGeometryImage from './images/sacred-geometry.jpg';
 import logo from './images/logo.png';
 
 const useStyles = makeStyles(theme => ({
@@ -196,6 +198,24 @@ export default function App() {
           <Typography variant="h2" gutterBottom>
             Apps
           </Typography>
+        </Grid>
+        <Grid item xs={12} sm={4} className={classes.card}>
+          <AppCard
+            title="Sacred Geometry"
+            text="Creating Sacred Geometry with JavaScript"
+            linkText="View"
+            link="https://sacredgeometry.golightlyplus.com"
+            image={sacredGeometryImage}
+          />
+        </Grid>
+        <Grid item xs={12} sm={4} className={classes.card}>
+          <AppCard
+            title="Multiverse"
+            text="connecting near and far to the conversation"
+            linkText="Create Events"
+            link="https://multiverse.createdeepconnections.com"
+            image={multiverseImage}
+          />
         </Grid>
         <Grid item xs={12} sm={4} className={classes.card}>
           <AppCard
