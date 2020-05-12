@@ -35,6 +35,7 @@ import coloursImage from './images/speech-to-colours.jpg';
 import synkImage from './images/synk.jpg';
 import multiverseImage from './images/multiverse.jpg';
 import sacredGeometryImage from './images/sacred-geometry.jpg';
+import speechImage from './images/speech.jpg';
 import logo from './images/logo.png';
 
 const useStyles = makeStyles(theme => ({
@@ -198,6 +199,15 @@ export default function App() {
           <Typography variant="h2" gutterBottom>
             Apps
           </Typography>
+        </Grid>
+        <Grid item xs={12} sm={4} className={classes.card}>
+          <AppCard
+            title="Speech AI"
+            text="A British assistant to read and translate for you."
+            linkText="Enter Text"
+            link="https://speech.golightlyplus.com"
+            image={speechImage}
+          />
         </Grid>
         <Grid item xs={12} sm={4} className={classes.card}>
           <AppCard
