@@ -17,6 +17,7 @@ import synkImage from './images/synk.jpg';
 import multiverseImage from './images/multiverse.jpg';
 import sacredGeometryImage from './images/sacred-geometry.jpg';
 import speechImage from './images/speech.jpg';
+import speechDemoImage from './images/speech-to-text-demo.jpg';
 
 const useStyles = makeStyles(theme => ({
   portfolioContainer: {
@@ -153,6 +154,15 @@ export default function Apps() {
           linkText="Change colours"
           link="https://apps.golightlyplus.com/speech-to-colours/"
           image={coloursImage}
+        />
+      </Grid>
+      <Grid item xs={12} sm={4} className={classes.card}>
+        <AppCard
+          title="Speech To Text Demo"
+          text="Test out speech recognition in your browser"
+          linkText="Run demo"
+          link="https://apps.golightlyplus.com/speech-to-text-demo/"
+          image={speechDemoImage}
         />
       </Grid>
     </Grid>
