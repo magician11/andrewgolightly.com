@@ -7,10 +7,6 @@ import {
   Typography,
   Avatar,
   Button,
-  Card,
-  CardActionArea,
-  CardMedia,
-  CardContent,
   Grow
 } from '@material-ui/core';
 import {
@@ -23,6 +19,7 @@ import { blue, red, purple, yellow } from '@material-ui/core/colors';
 import { makeStyles } from '@material-ui/core/styles';
 import Apps from './Apps';
 import Photos from './Photos';
+import Travels from './Travels';
 import agPhoto from './images/andrew-golightly.jpg';
 import logo from './images/logo.png';
 
@@ -48,9 +45,6 @@ const useStyles = makeStyles(theme => ({
   },
   empathsContainer: {
     backgroundColor: purple[800]
-  },
-  mapsContainer: {
-    backgroundColor: blue[300]
   },
   contactContainer: {
     backgroundColor: red[500]
@@ -215,7 +209,8 @@ export default function App() {
         </Grid>
       </Grid>
       <Photos />
-      <Grid
+      <Travels />
+      {/* <Grid
         container
         className={clsx(classes.container, classes.mapsContainer)}
         justify="center"
@@ -240,7 +235,7 @@ export default function App() {
             </CardActionArea>
           </Card>
         </Grid>
-      </Grid>
+      </Grid> */}
       <Grid
         container
         className={clsx(classes.container, classes.contactContainer)}
