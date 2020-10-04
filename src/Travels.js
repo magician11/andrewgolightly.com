@@ -4,9 +4,6 @@ import {
   GridList,
   GridListTile,
   GridListTileBar,
-  IconButton,
-  Slide,
-  Dialog,
   useMediaQuery,
   Card,
   CardContent,
@@ -16,7 +13,6 @@ import {
 } from '@material-ui/core';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { blue } from '@material-ui/core/colors';
-import ZoomInIcon from '@material-ui/icons/ZoomIn';
 
 import newZealand from './images/travels/new-zealand.jpg';
 import bulgaria from './images/travels/bulgaria.jpg';
@@ -79,7 +75,9 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'space-around',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    marginTop: theme.spacing(3),
+    marginBottom: theme.spacing(3)
   },
   mapsContainer: {
     backgroundColor: blue[300]
@@ -89,28 +87,18 @@ const useStyles = makeStyles(theme => ({
     paddingTop: '100%'
   },
   gridList: {
-    flexWrap: 'nowrap',
-    // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
-    transform: 'translateZ(0)'
+    width: theme.spacing(138),
+    height: theme.spacing(88)
   },
   icon: {
     color: 'rgba(255, 255, 255, 0.74)'
   }
 }));
 
-const Transition = React.forwardRef(function Transition(props, ref) {
-  return <Slide direction="up" ref={ref} {...props} />;
-});
-
 export default function Apps() {
   const classes = useStyles();
   const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.up('md'));
-  const [showImage, setShowImage] = React.useState(null);
-
-  const handleClose = () => {
-    setShowImage(null);
-  };
+  const aboveSmall = useMediaQuery(theme.breakpoints.up('sm'));
 
   return (
     <Grid
@@ -138,46 +126,20 @@ export default function Apps() {
           </CardActionArea>
         </Card>
       </Grid>
-      <Grid item>
+      <Grid item xs={10}>
         <div className={classes.root}>
           <GridList
-            cellHeight={componentHeight}
+            cellHeight={444}
             className={classes.gridList}
-            cols={3}
+            cols={aboveSmall ? 2 : 1}
           >
             {tileData.map((tile, i) => (
               <GridListTile key={tile.img}>
                 <img src={tile.img} alt={tile.title} />
-                <GridListTileBar
-                  title={tile.location}
-                  // subtitle={tile.location}
-                  actionIcon={
-                    matches && (
-                      <IconButton
-                        className={classes.icon}
-                        onClick={() => setShowImage(i)}
-                      >
-                        <ZoomInIcon />
-                      </IconButton>
-                    )
-                  }
-                />
+                <GridListTileBar title={tile.location} />
               </GridListTile>
             ))}
           </GridList>
-          {showImage !== null && (
-            <Dialog
-              fullScreen
-              open={showImage !== null}
-              onClose={handleClose}
-              TransitionComponent={Transition}
-            >
-              <img
-                src={tileData[showImage].img}
-                alt={tileData[showImage].location}
-              />
-            </Dialog>
-          )}
         </div>
       </Grid>
     </Grid>
