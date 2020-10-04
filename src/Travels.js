@@ -23,9 +23,9 @@ import spain from './images/travels/spain.jpg';
 import switzerland from './images/travels/switzerland.jpg';
 import southAfrica from './images/travels/south-africa.jpg';
 import italy from './images/travels/italy.jpg';
+import portugal from './images/travels/portugal.jpg';
 import england from './images/travels/england.jpg';
-
-const componentHeight = 380;
+import unitedStates from './images/travels/united-states.jpg';
 
 const tileData = [
   {
@@ -67,6 +67,14 @@ const tileData = [
   {
     img: switzerland,
     location: 'Switzerland'
+  },
+  {
+    img: portugal,
+    location: 'Portugal'
+  },
+  {
+    img: unitedStates,
+    location: 'USA'
   }
 ];
 
@@ -80,7 +88,8 @@ const useStyles = makeStyles(theme => ({
     marginBottom: theme.spacing(3)
   },
   mapsContainer: {
-    backgroundColor: blue[300]
+    backgroundColor: blue[300],
+    paddingTop: theme.spacing(3)
   },
   media: {
     height: 0,
