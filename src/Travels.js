@@ -26,6 +26,8 @@ import italy from './images/travels/italy.jpg';
 import portugal from './images/travels/portugal.jpg';
 import england from './images/travels/england.jpg';
 import unitedStates from './images/travels/united-states.jpg';
+import canada from './images/travels/canada.jpg';
+import japan from './images/travels/japan.jpg';
 
 const tileData = [
   {
@@ -75,6 +77,14 @@ const tileData = [
   {
     img: unitedStates,
     location: 'USA'
+  },
+  {
+    img: japan,
+    location: 'Japan'
+  },
+  {
+    img: canada,
+    location: 'Canada'
   }
 ];
 
