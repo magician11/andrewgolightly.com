@@ -28,6 +28,10 @@ import england from './images/travels/england.jpg';
 import unitedStates from './images/travels/united-states.jpg';
 import canada from './images/travels/canada.jpg';
 import japan from './images/travels/japan.jpg';
+import poland from './images/travels/poland.jpg';
+import finland from './images/travels/finland.jpg';
+import estonia from './images/travels/estonia.jpg';
+import germany from './images/travels/germany.jpg';
 
 const tileData = [
   {
@@ -85,6 +89,22 @@ const tileData = [
   {
     img: canada,
     location: 'Canada'
+  },
+  {
+    img: finland,
+    location: 'Finland'
+  },
+  {
+    img: poland,
+    location: 'Poland'
+  },
+  {
+    img: estonia,
+    location: 'Estonia'
+  },
+  {
+    img: germany,
+    location: 'Germany'
   }
 ];
 
