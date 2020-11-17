@@ -32,6 +32,8 @@ import poland from './images/travels/poland.jpg';
 import finland from './images/travels/finland.jpg';
 import estonia from './images/travels/estonia.jpg';
 import germany from './images/travels/germany.jpg';
+import georgia from './images/travels/georgia.jpg';
+import australia from './images/travels/australia.jpg';
 
 const tileData = [
   {
@@ -105,6 +107,14 @@ const tileData = [
   {
     img: germany,
     location: 'Germany'
+  },
+  {
+    img: georgia,
+    location: 'Georgia'
+  },
+  {
+    img: australia,
+    location: 'Australia'
   }
 ];
 
@@ -164,6 +174,11 @@ export default function Apps() {
             </CardContent>
           </CardActionArea>
         </Card>
+      </Grid>
+      <Grid item xs={10}>
+        <Typography variant="subtitle1" color="textSecondary" align="center">
+          Below are {tileData.length} photos of the 40 countries.
+        </Typography>
       </Grid>
       <Grid item xs={10}>
         <div className={classes.root}>
