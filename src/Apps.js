@@ -6,7 +6,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppCard from './AppCard';
 import birthdaysImage from './images/birthdays-ai.jpg';
 import speakingImage from './images/syzygy-solutions.jpg';
-import moviesImage from './images/movies.jpg';
 import conversationsImage from './images/conversation.jpg';
 import bitcoinImage from './images/bitcoin.jpg';
 import nakedGirlImage from './images/naked-girl.jpg';
@@ -41,6 +40,42 @@ export default function Apps() {
       </Grid>
       <Grid item xs={12} sm={4} className={classes.card}>
         <AppCard
+          title="Birthdays AI"
+          text="keeping track of birthdays for you"
+          linkText="Setup birthdays"
+          link="https://birthdays.ai"
+          image={birthdaysImage}
+        />
+      </Grid>
+      <Grid item xs={12} sm={4} className={classes.card}>
+        <AppCard
+          title="Deep Connections"
+          text="start a conversation with those around you"
+          linkText="Download app"
+          link="https://createdeepconnections.com"
+          image={conversationsImage}
+        />
+      </Grid>
+      <Grid item xs={12} sm={4} className={classes.card}>
+        <AppCard
+          title="Multiverse"
+          text="connecting near and far to the conversation"
+          linkText="Create Events"
+          link="https://multiverse.createdeepconnections.com"
+          image={multiverseImage}
+        />
+      </Grid>
+      <Grid item xs={12} sm={4} className={classes.card}>
+        <AppCard
+          title="Syzygy Solutions"
+          text="search for images with your voice"
+          linkText="Search images"
+          link="https://syzygy.solutions"
+          image={speakingImage}
+        />
+      </Grid>
+      <Grid item xs={12} sm={4} className={classes.card}>
+        <AppCard
           title="Speech AI"
           text="A British assistant to read and translate for you."
           linkText="Enter Text"
@@ -59,56 +94,11 @@ export default function Apps() {
       </Grid>
       <Grid item xs={12} sm={4} className={classes.card}>
         <AppCard
-          title="Multiverse"
-          text="connecting near and far to the conversation"
-          linkText="Create Events"
-          link="https://multiverse.createdeepconnections.com"
-          image={multiverseImage}
-        />
-      </Grid>
-      <Grid item xs={12} sm={4} className={classes.card}>
-        <AppCard
           title="Synk"
           text="share your travel schedule with select friends"
           linkText="Share Travels"
           link="https://synk.world/"
           image={synkImage}
-        />
-      </Grid>
-      <Grid item xs={12} sm={4} className={classes.card}>
-        <AppCard
-          title="Birthdays AI"
-          text="keeping track of birthdays for you"
-          linkText="Setup birthdays"
-          link="https://birthdays.ai"
-          image={birthdaysImage}
-        />
-      </Grid>
-      <Grid item xs={12} sm={4} className={classes.card}>
-        <AppCard
-          title="Syzygy Solutions"
-          text="search for images with your voice"
-          linkText="Search images"
-          link="https://syzygy.solutions"
-          image={speakingImage}
-        />
-      </Grid>
-      <Grid item xs={12} sm={4} className={classes.card}>
-        <AppCard
-          title="Chiang Mai Movies"
-          text="movie times with Rottentomato data for Maya Mall"
-          linkText="View movies"
-          link="https://chiangmaimovies.com"
-          image={moviesImage}
-        />
-      </Grid>
-      <Grid item xs={12} sm={4} className={classes.card}>
-        <AppCard
-          title="Deep Connections"
-          text="start a conversation with those around you"
-          linkText="Download app"
-          link="https://createdeepconnections.com"
-          image={conversationsImage}
         />
       </Grid>
       <Grid item xs={12} sm={4} className={classes.card}>
