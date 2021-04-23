@@ -20,7 +20,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Apps from './Apps';
 import Photos from './Photos';
 import Travels from './Travels';
-import agPhoto from './images/andrew-golightly.jpg';
+import agPhoto from './images/andrew-golightly.jpeg';
 import logo from './images/logo.png';
 
 const useStyles = makeStyles(theme => ({
