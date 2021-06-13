@@ -69,6 +69,12 @@ const useStyles = makeStyles(theme => ({
   },
   bodyText: {
     fontSize: theme.spacing(2.2)
+  },
+  quote: {
+    textAlign: 'center',
+    fontStyle: 'italic',
+    fontSize: theme.spacing(2.2),
+    marginTop: theme.spacing(8)
   }
 }));
 
@@ -210,41 +216,22 @@ export default function App() {
       </Grid>
       <Photos />
       <Travels />
-      {/* <Grid
-        container
-        className={clsx(classes.container, classes.mapsContainer)}
-        justify="center"
-        alignItems="center"
-      >
-        <Grid item xs={10} sm={8}>
-          <Card>
-            <CardActionArea>
-              <CardMedia
-                component="iframe"
-                alt="Andrew Travels"
-                height="470"
-                src="https://www.google.com/maps/d/embed?mid=1TepY-cF-tV1zLyADZU3-B-qaVGc"
-                title="Andrew's Travels"
-              />
-              <CardContent>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  Spent most of life in South Africa, New Zealand, Australia,
-                  Thailand, England, and the USA. To date, visited 40 countries.
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
-        </Grid>
-      </Grid> */}
+
       <Grid
         container
         className={clsx(classes.container, classes.contactContainer)}
         justify="center"
         alignItems="center"
       >
-        <Grid item className={classes.verticallyAlign} xs={8}>
+        <Grid item className={classes.verticallyAlign} xs={9} sm={8} lg={6}>
           <Typography variant="h3" gutterBottom className={classes.bodyText}>
             support@andrewgolightly.com
+          </Typography>
+          <Typography variant="h3" gutterBottom className={clsx(classes.quote)}>
+            “If someone can prove me wrong and show me my mistake in any thought
+            or action, I shall gladly change. I seek the truth, which never
+            harmed anyone: the harm is to persist in one's own self-deception
+            and ignorance.” ― Marcus Aurelius, Meditations
           </Typography>
         </Grid>
       </Grid>
